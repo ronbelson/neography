@@ -477,6 +477,8 @@ module Neography
 			 {:method => "DELETE", :to => "/index/node/#{args[1]}/#{args[2]}/#{args[3]}/#{get_id(args[4])}" }
 		  when :delete_node
 		   	{:method => "DELETE", :to => "/node/#{get_id(args[1])}"}
+		  when :delete_relationship
+		    {:method => "DELETE",:to => "/relationship/#{get_id(args[1])}"}
 		  when :remove_relationship_from_index
 		    case args.size
           when 5 then delete("/index/relationship/#{args[1]}/#{args[2]}/#{args[3]}/#{get_id(args[4])}")
